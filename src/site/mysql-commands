@@ -9,13 +9,12 @@ GRANT CREATE,ALTER,DELETE,EXECUTE,INSERT,TRIGGER,UPDATE ON homeservice_master.* 
 GRANT CREATE,ALTER,DELETE,EXECUTE,INSERT,TRIGGER,UPDATE ON homeservice_provider.* TO 'moranhat'@'localhost';
 
 
+create database homeservice_views;
 CREATE USER 'moran'@'localhost' IDENTIFIED BY 'abcd.1234';
-
-GRANT SELECT ON homeservice_enduser.* TO 'moran'@'localhost';
-GRANT SELECT ON homeservice_master.* TO 'moran'@'localhost';
-GRANT SELECT ON homeservice_provider.* TO 'moran'@'localhost';
+GRANT SELECT ON homeservice_views.* TO 'moran'@'localhost';
 
 change database homeservice_master;
 create table country as 
 INSERT INTO homeservice_enduser.country values (1, India);
-INSERT INTO homeservice_enduser.country values (1, India);
+INSERT INTO homeservice_enduser.country values (2, Nepal);
+
