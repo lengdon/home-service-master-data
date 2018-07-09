@@ -1,4 +1,4 @@
-package com.moran.home.service.master;
+package com.moran.home.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
